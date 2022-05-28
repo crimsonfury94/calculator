@@ -24,7 +24,7 @@ public class CalculatorController {
         if (num1 == null || num2 == null) {
             return "<b>Проверьте наличие параметров!</b>";
         } else {
-            return num1 + " + " + num2 + " = " + (num1 + num2);
+            return num1 + " + " + num2 + " = " + calculatorService.plus(num1,num2);
         }
     }
 
@@ -33,7 +33,7 @@ public class CalculatorController {
         if (num1 == null || num2 == null) {
             return "<b>Проверьте наличие параметров!</b>";
         } else {
-            return num1 + " - " + num2 + " = " + (num1 - num2);
+            return num1 + " - " + num2 + " = " + calculatorService.minus(num1,num2);
         }
     }
 
@@ -42,7 +42,7 @@ public class CalculatorController {
         if (num1 == null || num2 == null) {
             return "<b>Проверьте наличие параметров!</b>";
         } else {
-            return num1 + " * " + num2 + " = " + (num1 * num2);
+            return num1 + " * " + num2 + " = " + calculatorService.multiply(num1,num2);
         }
 
     }
@@ -54,7 +54,7 @@ public class CalculatorController {
         } else if(num2 == 0) {
             return "<b>Пространство схлопнулось</b>";
         }else {
-            return num1 + " / " + num2 + " = " + (num1 / num2);
+            return num1 + " / " + num2 + " = " + calculatorService.divide(num1,num2);
         }
     }
 }
