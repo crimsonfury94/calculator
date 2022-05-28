@@ -4,13 +4,13 @@ public interface CalculatorService {
 
     String welcome();
 
-    String plus(String num1, String num2);
+    float plus(float num1, float num2);
 
 
-    String minus(String num1, String num2);
+    float minus(float num1, float num2);
 
-    String multiply(String num1, String num2);
+    float multiply(float num1, float num2);
 
-    String divide(String num1, String num2);
+    float divide(float num1, float num2);
 
 }

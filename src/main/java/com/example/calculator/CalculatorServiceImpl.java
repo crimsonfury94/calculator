@@ -12,41 +12,23 @@ public class CalculatorServiceImpl implements CalculatorService {
     }
 
     @Override
-    public String plus(String num1, String num2) {
-        if (num1.isEmpty() || num2.isEmpty()) {
-            return "<b>Проверьте наличие параметров!</b>";
-        }
-        int result = Integer.parseInt(num1) + Integer.parseInt(num2);
-        return num1 + " + " + num2 + " = " + result;
+    public float plus(float num1, float num2) {
+        return num1 + num2;
     }
 
     @Override
-    public String minus(String num1, String num2) {
-        if (num1.isEmpty() || num2.isEmpty()) {
-            return "<b>Проверьте наличие параметров!</b>";
-        }
-        int result = Integer.parseInt(num1) - Integer.parseInt(num2);
-        return num1 + " - " + num2 + " = " + result;
+    public float minus(float num1, float num2) {
+        return num1 - num2;
     }
 
     @Override
-    public String multiply(String num1, String num2) {
-        if (num1.isEmpty() || num2.isEmpty()) {
-            return "<b>Проверьте наличие параметров!</b>";
-        }
-        int result = Integer.parseInt(num1) * Integer.parseInt(num2);
-        return num1 + " * " + num2 + " = " + result;
+    public float multiply(float num1, float num2) {
+        return num1 * num2;
     }
 
     @Override
-    public String divide(String num1, String num2) {
-        if (num1.isEmpty() || num2.isEmpty()) {
-            return "<b>Проверьте наличие параметров!</b>";
-        } else if (num2.equals(String.valueOf(0))) {
-            return "<b>Пространство схлопнулось</b>";
-        }
-        double result = Double.parseDouble(num1) / Double.parseDouble(num2);
-        return num1 + " / " + num2 + " = " + result;
+    public float divide(float num1, float num2) {
+        return num1 / num2;
     }
 
 }
