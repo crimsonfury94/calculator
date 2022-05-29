@@ -20,7 +20,8 @@ public class CalculatorController {
     }
 
     @RequestMapping(path = "/plus")
-    public String plus(@RequestParam("num1") Float num1, @RequestParam("num2") Float num2) {
+    public String plus(@RequestParam(value = "num1", required = false) Float num1,
+                       @RequestParam(value = "num2", required = false) Float num2) {
         if (num1 == null || num2 == null) {
             return "<b>Проверьте наличие параметров!</b>";
         } else {
@@ -29,7 +30,8 @@ public class CalculatorController {
     }
 
     @RequestMapping(path = "/minus")
-    public String minus(@RequestParam("num1") Float num1, @RequestParam("num2") Float num2) {
+    public String minus(@RequestParam(value = "num1", required = false) Float num1,
+                        @RequestParam(value = "num2", required = false) Float num2) {
         if (num1 == null || num2 == null) {
             return "<b>Проверьте наличие параметров!</b>";
         } else {
@@ -38,7 +40,8 @@ public class CalculatorController {
     }
 
     @RequestMapping(path = "/multiply")
-    public String multiply(@RequestParam("num1") Float num1, @RequestParam("num2") Float num2) {
+    public String multiply(@RequestParam(value = "num1", required = false) Float num1,
+                           @RequestParam(value = "num2", required = false) Float num2) {
         if (num1 == null || num2 == null) {
             return "<b>Проверьте наличие параметров!</b>";
         } else {
@@ -48,7 +51,8 @@ public class CalculatorController {
     }
 
     @RequestMapping(path = "/divide")
-    public String divide(@RequestParam("num1") Float num1, @RequestParam("num2") Float num2) {
+    public String divide(@RequestParam(value = "num1", required = false) Float num1,
+                         @RequestParam(value = "num2", required = false) Float num2) {
         if (num1 == null || num2 == null) {
             return  "<b>Проверьте наличие параметров!</b>" ;
         } else if(num2 == 0) {
